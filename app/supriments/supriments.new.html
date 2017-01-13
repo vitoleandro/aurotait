@@ -1,0 +1,28 @@
+<section class="contx-header">
+  <h2>Suprimentos</h2>
+  <a href="#!/">todos os suprimentos</a>
+</section>
+
+<form class="form" name="supriForm">
+  <div class="gd">
+    <div class="gd-col-2">
+      <label for="">Nome</label>
+      <input type="text" name="nome" value="" ng-model="supri.nome" required>
+    </div>
+    <div class="gd-col-2">
+      <label for="">Tipo</label>
+      <input type="text" name="tipo" value="" ng-model="supri.tipo" required>
+    </div>
+  </div>
+  <div class="gd">
+    <div class="gd-col-2">
+      <label for="">Validade</label>
+      <input type="date" name="validade" value="" ng-model="supri.validade" required>
+    </div>
+    <div class="gd-col-2">
+      <label for="">Localizacao</label>
+      <input type="text" name="localizacao" value="" ng-model="supri.localizacao" required>
+    </div>
+  </div>
+  <button type="submit" name="button" ng-click="supri.save()">save</button>
+</form>

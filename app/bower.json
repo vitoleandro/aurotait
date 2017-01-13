@@ -1,0 +1,22 @@
+{
+  "name": "test_aurora",
+  "main": "app.js",
+  "authors": [
+    "Leandro Vitor <vitoleandro@gmail.com>"
+  ],
+  "description": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-route": "^1.6.1",
+    "ngstorage": "^0.3.11"
+  }
+}

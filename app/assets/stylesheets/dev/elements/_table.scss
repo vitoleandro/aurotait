@@ -1,0 +1,27 @@
+/**
+ * @file: elements/_table.scss
+ * @desc: estilos e configurações para elementos de tabela
+ * @resp: Leandro Vitor
+ * @version: 0.0.1
+ */
+
+.table {
+  width          : 90%;
+  margin         : 3% 5%;
+  color          : $font-color;
+  border-collapse: collapse;
+
+  th {
+    padding       : 10px 0;
+    font-size     : .7em;
+    font-weight   : bold;
+    text-transform: uppercase;
+    background: white;
+  }
+
+  td {
+    font-size : .8em;
+    padding   : 15px 0;
+    text-align: center;
+  }
+}

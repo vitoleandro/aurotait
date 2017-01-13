@@ -1,0 +1,47 @@
+/**
+ * @file: elements/_form.scss
+ * @desc: Configurações e estilos de formularios e
+ * seus elementos
+ * @resp: Leandro Vitor
+ * @version: 0.0.1
+ */
+
+.form {
+  width : 90%;
+  margin: 20px 5%;
+
+  label {
+    display      : block;
+    margin-bottom: 10px;
+    font-weight  : bold;
+    font-size    : .75em;
+    color        : $font-color;
+  }
+
+  input {
+    width        : 98%;
+    height       : 35px;
+    border       : 1px solid $ligth-gray;
+    border-radius: 2px;
+    background   : white;
+    text-indent  : 20px;
+  }
+
+  button {
+    float         : right;
+    width         : 100px;
+    height        : 35px;
+    text-transform: uppercase;
+    font-weight   : 300;
+    color         : white;
+    border        : none;
+    border-radius : 2px;
+    cursor        : pointer;
+    background    : $destak;
+  }
+
+  .help-block {
+    font-size: .65em;
+    color    : red;
+  }
+}

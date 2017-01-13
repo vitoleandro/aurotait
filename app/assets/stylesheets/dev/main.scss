@@ -1,0 +1,14 @@
+// Core folder
+@import 'core/colors';
+@import 'core/_base';
+
+//components
+@import 'components/header';
+@import 'components/main';
+@import 'components/context';
+@import 'components/grid';
+
+//Elements
+@import 'elements/table';
+@import 'elements/form';
+@import 'elements/search';

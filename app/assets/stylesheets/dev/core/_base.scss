@@ -1,0 +1,20 @@
+/**
+ * @file: core/_base.scss
+ * @desc: Prove as configurações principais da aplicação
+ * @resp: Leandro Vitor
+ * @version: 0.0.1
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  font-family: 'Nunito', Verdana;
+  background: #fafafa;
+  box-sizing: border-box;
+}

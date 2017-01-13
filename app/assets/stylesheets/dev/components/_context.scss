@@ -1,0 +1,34 @@
+/**
+ * @file: components/_context.scss
+ * @desc: Trata dos estilos e configurações de elementos
+ * de um contexto (supriments header, supriments content ...)
+ * @prefix: contx-
+ * @resp: Leandro Vitor
+ * @version: 0.0.1
+ */
+
+.contx-header {
+  display: inline-block;
+  width: 90%;
+  height: 40px;
+  margin: 0 5%;
+  border-bottom: 2px solid #eeeeee;
+
+  h2 {
+    float: left;
+    font-weight: bold;
+    color: $font-color;
+  }
+
+  a {
+    float: right;
+    padding: .5em .7em;
+    background: $destak;
+    font-size: .7em;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+  }
+}

@@ -1,0 +1,18 @@
+/**
+ * @file: components/_grid.scss
+ * @desc: Grid simples para a aplicação
+ * @prefix: .gd-
+ * @resp: Leandro Vitor
+ * @version: 0.0.1
+ */
+
+.gd {
+  display      : flex;
+  width        : 100%;
+  margin-bottom: 30px;
+}
+
+.gd-col-2 {
+  width : 50%;
+  margin: 0 auto;
+}

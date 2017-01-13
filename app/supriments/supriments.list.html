@@ -1,0 +1,25 @@
+<section class="contx-header">
+  <h2>Suprimentos</h2>
+  <a href="#!/supriment/new">novo suprimento</a>
+</section>
+
+<input class="search" type="text" name="" value="" placeholder="search" ng-model="supri.search">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>nome</th>
+      <th>tipo</th>
+      <th>validade</th>
+      <th>localização</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="i in supri.supriments | filter:supri.search">
+      <td>{{i.name}}</td>
+      <td>{{i.tipo}}</td>
+      <td>{{i.validade}}</td>
+      <td>{{i.localizacao}}</td>
+    </tr>
+  </tbody>
+</table>
