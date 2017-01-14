@@ -155,8 +155,7 @@ body {
     cursor: pointer;
     background: #4990E2; }
   .form .help-block {
-    font-size: .65em;
-    color: red; }
+    border: 1px solid red; }
 
 /**
  * @file: elements/_search.scss

@@ -10,20 +10,33 @@ angular
  * SuprimentsController dependences
  * @type {Array}
  */
-SuprimentsController.$inject = ['$scope','$localStorage', '$window']
+SuprimentsController.$inject = ['$scope', '$window', 'SupriFactory']
 
 /**
  * [SuprimentsController description]
  * @method SuprimentsController
  * @param  {Angular Object}             $scope        [description]
- * @param  {Angular Object}             $localStorage [description]
  * @param  {Angular Object}             $window       [description]
  */
-function SuprimentsController ($scope, $localStorage, $window) {
+function SuprimentsController ($scope, $window, SupriFactory) {
   // vm é o object utilizado para o data bind
-  let vm = this;
-  // array que é inserido no local storage
-  let myarr = [];
+  let vm  = this,
+  dateNow = new Date();
+
+  /**
+   * Teste de validade da data
+   * @method isValid
+   * @param  {Date}
+   * @return {Boolean}
+   */
+  vm.isValid = function(date) {
+    if (date.toDateString() <= dateNow.toDateString()) {
+      angular.element(document.getElementById("validade")).addClass('help-block');
+    }
+    else {
+      angular.element(document.getElementById("validade")).removeClass('help-block');
+    }
+  }
 
   // Método que salva o array no localStorage. É criado um objeto com
   // as variáveis (ng-model) do formulario
@@ -36,13 +49,13 @@ function SuprimentsController ($scope, $localStorage, $window) {
       validade: vm.validade,
       localizacao: vm.localizacao
     };
-
-    myarr.push(vm.supri);
-    $window.localStorage.setItem('supriments',JSON.stringify(myarr));
+    // Submit é o metodo criado na factory SupriFactory, para inserir os dados
+    // nas chave.
+    SupriFactory.submit(vm.supri);
   }
 
-  // é adiquirido a lista de itens pertencente a chave
-  // supriments e adicionado em vm.supriments apos um parse.
-  let supr = $window.localStorage.getItem('supriments');
+  // Get é um metodo de SupriFactory que retorna os dados da chave passada.
+  let supr = SupriFactory.get('supriments');
+  // Apos adiquirir os dados, é feito um parse.
   vm.supriments = JSON.parse(supr);
 }

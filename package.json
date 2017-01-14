@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "http-server -p 3000",
-    "test": "protractor protractor.conf.js",
+    "start": "http-server",
+    "test": "protractor protractor.conf.js"
   },
   "author": "Leandro Vitor",
   "license": "ISC",
